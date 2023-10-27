@@ -10,6 +10,8 @@ public class Test {
 		A temp=(A)context.getBean("aref");
 		System.out.println(temp.getX());
 		System.out.println(temp.getOb().getY());
-	}
+	    System.out.println(temp);
+	
+}
 
 }

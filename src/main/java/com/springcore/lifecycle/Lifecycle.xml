@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="
+  http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+						http://www.springframework.org/schema/context http://www.springframework.org/schema/beans/spring-context.xsd">
+ 
+
+<!--  <context:annotation-config/> if you want use annotation then you have to enable it or bean method -->
+
+<bean class="com.springcore.lifecycle.Samosa" name="s1" 
+init-method="init" destroy-method="destroy">
+<property name="price" value="8"/>
+</bean >
+
+ <!--this is for  using interfaces  -->
+<bean class="com.springcore.lifecycle.Pepsi" name="p1">
+<property name="price" value="5"></property>
+
+</bean>
+	
+	<!-- this is by using annotation  -->
+	<bean class="com.springcore.lifecycle.Example" name="example">
+	<property name="subject" value="maths"/>
+	</bean>
+	<bean class=" org.springframework.context.annotation.CommonAnnotationBeanPostProcessor"/>
+	<!--control+shift+t  -->
+	
+</beans>
